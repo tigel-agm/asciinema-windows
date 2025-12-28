@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+# asciinema-win executable
+#
+# Native Windows terminal recorder and player in pure Ruby.
+# Compatible with asciicast v2 format.
+#
+# Usage:
+#   asciinema_win rec <filename>     Record terminal session
+#   asciinema_win play <filename>    Play back recording
+#   asciinema_win cat <filename>     Output to stdout (no timing)
+#   asciinema_win info <filename>    Show recording info
+#   asciinema_win --help             Show help
+
+require_relative "../lib/asciinema_win"
+
+exit AsciinemaWin::CLI.run(ARGV)
